@@ -1,0 +1,37 @@
+<div class="dashboard-container">
+  <h2>Resumen Financiero</h2>
+  
+  <div class="cards-grid">
+    
+    <!-- Tarjeta de Ingresos -->
+    <mat-card class="card ingresos">
+      <mat-card-header>
+        <mat-card-title>Ingresos Totales</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h1>{{ resumen?.totalIngresos | currency:'COP':'symbol-narrow':'1.0-0' }}</h1>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Tarjeta de Gastos -->
+    <mat-card class="card gastos">
+      <mat-card-header>
+        <mat-card-title>Gastos Totales</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h1>{{ resumen?.totalGastos | currency:'COP':'symbol-narrow':'1.0-0' }}</h1>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Tarjeta de Balance -->
+    <mat-card class="card balance">
+      <mat-card-header>
+        <mat-card-title>Balance Actual</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h1>{{ resumen?.balance | currency:'COP':'symbol-narrow':'1.0-0' }}</h1>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>
